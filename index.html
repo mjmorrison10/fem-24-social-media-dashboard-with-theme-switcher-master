@@ -12,97 +12,112 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>MJMorrison10 | Social Media Dashboard with Theme Switcher</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="left-container">
-        <div class="header-title">Social Media Dashboard</div>
-        <div class="header-followers">Total Followers: 23,004</div>
-      </div>
-      <div class="right-container">Dark Mode</div>
-    </header>
-
-    <main>
-      <div class="container facebook">
-        <div class="social-media">@nathanf</div>
-        <div class="number-of-followers">1987</div>
-        <div class="social-text">Followers</div>
-        <div class="today-amount">12 Today</div>
-      </div>
-      <div class="container twitter">
-        <div class="social-media">@nathanf</div>
-        <div class="number-of-followers">1044</div>
-        <div class="social-text">Followers</div>
-        <div class="today-amount">99 Today</div>
-      </div>
-      <div class="container instagram">
-        <div class="social-media">@realnathanf</div>
-        <div class="number-of-followers">11k</div>
-        <div class="social-text">Followers</div>
-        <div class="today-amount">1099 Today</div>
-      </div>
-      <div class="container youtube">
-        <div class="social-media">Nathan F.</div>
-        <div class="number-of-followers">8239</div>
-        <div class="social-text">Subscribers</div>
-        <div class="today-amount">144 Today</div>
-      </div>
-      <div class="today">
-        <h1>Overview - Today</h1>
-        <div class="today-container facebook-page-views">
-          <div class="title">Page Views</div>
-          <div class="number">87</div>
-          <div class="percent">3%</div>
+    <div class="wrapper">
+      <header>
+        <div class="left-container">
+          <h1 class="header-title">Social Media Dashboard</h1>
+          <div class="header-followers">Total Followers: 23,004</div>
         </div>
-        <div class="today-container facebook-likes">
-          <div class="title">Likes</div>
-          <div class="number">52</div>
-          <div class="percent">2%</div>
+        <div class="right-container">
+          <div class="right-container-text">Dark Mode</div>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
         </div>
-        <div class="today-container instagram-likes">
-          <div class="title">Likes</div>
-          <div class="number">5462</div>
-          <div class="percent">2257%</div>
+      </header>
+      <main>
+        <div class="daily-overview">
+          <div class="container facebook">
+            <div class="social-media">@nathanf</div>
+            <div class="number-of-followers">1987</div>
+            <div class="social-text">Followers</div>
+            <div class="today-amount">12 Today</div>
+          </div>
+          <div class="container twitter">
+            <div class="social-media">@nathanf</div>
+            <div class="number-of-followers">1044</div>
+            <div class="social-text">Followers</div>
+            <div class="today-amount">99 Today</div>
+          </div>
+          <div class="container instagram">
+            <div class="social-media">@realnathanf</div>
+            <div class="number-of-followers">11k</div>
+            <div class="social-text">Followers</div>
+            <div class="today-amount">1099 Today</div>
+          </div>
+          <div class="container youtube">
+            <div class="social-media">Nathan F.</div>
+            <div class="number-of-followers">8239</div>
+            <div class="social-text">Subscribers</div>
+            <div class="today-amount">144 Today</div>
+          </div>
         </div>
-        <div class="today-container instagram-profile-views">
-          <div class="title">Profile Views</div>
-          <div class="number">52k</div>
-          <div class="percent">1375%</div>
+        <div class="today">
+          <h2>Overview - Today</h2>
+          <div class="today-container facebook-page-views">
+            <div class="title">Page Views</div>
+            <div class="number">87</div>
+            <div class="percent">3%</div>
+          </div>
+          <div class="today-container facebook-likes">
+            <div class="title">Likes</div>
+            <div class="number">52</div>
+            <div class="percent">2%</div>
+          </div>
+          <div class="today-container instagram-likes">
+            <div class="title">Likes</div>
+            <div class="number">5462</div>
+            <div class="percent">2257%</div>
+          </div>
+          <div class="today-container instagram-profile-views">
+            <div class="title">Profile Views</div>
+            <div class="number">52k</div>
+            <div class="percent">1375%</div>
+          </div>
+          <div class="today-container twitter-retweets">
+            <div class="title">Retweets</div>
+            <div class="number">117</div>
+            <div class="percent">303%</div>
+          </div>
+          <div class="today-container twitter-likes">
+            <div class="title">Likes</div>
+            <div class="number">507</div>
+            <div class="percent">553%</div>
+          </div>
+          <div class="today-container youtube-likes">
+            <div class="title">Likes</div>
+            <div class="number">107</div>
+            <div class="percent">19%</div>
+          </div>
+          <div class="today-container youtube-total-views">
+            <div class="title">Total Views</div>
+            <div class="number">1407</div>
+            <div class="percent">12%</div>
+          </div>
         </div>
-        <div class="today-container twitter-retweets">
-          <div class="title">Retweets</div>
-          <div class="number">117</div>
-          <div class="percent">303%</div>
+      </main>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://portfolio-mjm-react.netlify.app/">mjmorrison10</a>.
         </div>
-        <div class="today-container twitter-likes">
-          <div class="title">Likes</div>
-          <div class="number">507</div>
-          <div class="percent">553%</div>
-        </div>
-        <div class="today-container youtube-likes">
-          <div class="title">Likes</div>
-          <div class="number">107</div>
-          <div class="percent">19%</div>
-        </div>
-        <div class="today-container youtube-total-views">
-          <div class="title">Total Views</div>
-          <div class="number">1407</div>
-          <div class="percent">12%</div>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://portfolio-mjm-react.netlify.app/">mjmorrison10</a>.
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
