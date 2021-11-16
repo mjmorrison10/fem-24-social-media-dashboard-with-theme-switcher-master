@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
       <header>
         <div class="left-container">
@@ -33,7 +33,7 @@
         <div class="right-container">
           <div class="right-container-text">Dark Mode</div>
           <label class="switch">
-            <input type="checkbox" />
+            <input class="checkbox" type="checkbox" />
             <span class="slider round"></span>
           </label>
         </div>
@@ -41,71 +41,195 @@
       <main>
         <div class="daily-overview">
           <div class="container facebook">
-            <div class="social-media">@nathanf</div>
+            <div class="container-title">
+              <div class="facebook-icon icon">
+                <img src="./images/icon-facebook.svg" alt="facebook" />
+              </div>
+              <div class="social-media">&nbsp;@nathanf</div>
+            </div>
             <div class="number-of-followers">1987</div>
             <div class="social-text">Followers</div>
-            <div class="today-amount">12 Today</div>
+            <div class="amount-details details">
+              <div class="up-icon">
+                <img src="./images/icon-up.svg" alt="up icon" />
+              </div>
+              <div class="today-amount positive">&nbsp;12 Today</div>
+            </div>
           </div>
           <div class="container twitter">
-            <div class="social-media">@nathanf</div>
+            <div class="container-title">
+              <div class="twitter-icon icon">
+                <img src="./images/icon-twitter.svg" alt="twitter" />
+              </div>
+              <div class="social-media">&nbsp;@nathanf</div>
+            </div>
             <div class="number-of-followers">1044</div>
             <div class="social-text">Followers</div>
-            <div class="today-amount">99 Today</div>
+            <div class="amount-details details">
+              <div class="up-icon">
+                <img src="./images/icon-up.svg" alt="up icon" />
+              </div>
+              <div class="today-amount positive">&nbsp;99 Today</div>
+            </div>
           </div>
           <div class="container instagram">
-            <div class="social-media">@realnathanf</div>
+            <div class="container-title">
+              <div class="instagram-icon icon">
+                <img src="./images/icon-instagram.svg" alt="instagram" />
+              </div>
+              <div class="social-media positive">&nbsp;@realnathanf</div>
+            </div>
             <div class="number-of-followers">11k</div>
             <div class="social-text">Followers</div>
-            <div class="today-amount">1099 Today</div>
+            <div class="amount-details details">
+              <div class="up-icon">
+                <img src="./images/icon-up.svg" alt="up icon" />
+              </div>
+              <div class="today-amount positive">&nbsp;1099 Today</div>
+            </div>
           </div>
           <div class="container youtube">
-            <div class="social-media">Nathan F.</div>
+            <div class="container-title">
+              <div class="youtube-icon icon">
+                <img src="./images/icon-youtube.svg" alt="" />
+              </div>
+              <div class="social-media">&nbsp;Nathan F.</div>
+            </div>
             <div class="number-of-followers">8239</div>
             <div class="social-text">Subscribers</div>
-            <div class="today-amount">144 Today</div>
+            <div class="amount-details details">
+              <div class="down-icon">
+                <img src="./images/icon-down.svg" alt="down icon" />
+              </div>
+
+              <div class="today-amount negative">&nbsp;144 Today</div>
+            </div>
           </div>
         </div>
+        <h2 class="overview">Overview - Today</h2>
         <div class="today">
-          <h2>Overview - Today</h2>
           <div class="today-container facebook-page-views">
             <div class="title">Page Views</div>
+            <div class="facebook-icon icon">
+              <img src="./images/icon-facebook.svg" alt="facebook" />
+            </div>
             <div class="number">87</div>
-            <div class="percent">3%</div>
+
+            <div class="percent positive">
+              <div class="details">
+                <div class="up-icon">
+                  <img src="./images/icon-up.svg" alt="up icon" />
+                </div>
+                &nbsp;3%
+              </div>
+            </div>
           </div>
           <div class="today-container facebook-likes">
             <div class="title">Likes</div>
+            <div class="facebook-icon icon">
+              <img src="./images/icon-facebook.svg" alt="facebook" />
+            </div>
             <div class="number">52</div>
-            <div class="percent">2%</div>
+            <div class="percent negative">
+              <div class="details">
+                <div class="down-icon">
+                  <img src="./images/icon-down.svg" alt="down icon" />
+                </div>
+                &nbsp;2%
+              </div>
+            </div>
           </div>
           <div class="today-container instagram-likes">
             <div class="title">Likes</div>
+            <div class="instagram-icon icon">
+              <img src="./images/icon-instagram.svg" alt="instagram" />
+            </div>
             <div class="number">5462</div>
-            <div class="percent">2257%</div>
+            <div class="percent positive">
+              <div class="details">
+                <div class="up-icon">
+                  <img src="./images/icon-up.svg" alt="up icon" />
+                </div>
+                &nbsp;2257%
+              </div>
+            </div>
           </div>
+
           <div class="today-container instagram-profile-views">
             <div class="title">Profile Views</div>
+            <div class="instagram-icon icon">
+              <img src="./images/icon-instagram.svg" alt="instagram" />
+            </div>
             <div class="number">52k</div>
-            <div class="percent">1375%</div>
+            <div class="percent positive">
+              <div class="details">
+                <div class="up-icon">
+                  <img src="./images/icon-up.svg" alt="up icon" />
+                </div>
+                &nbsp;1375%
+              </div>
+            </div>
           </div>
           <div class="today-container twitter-retweets">
             <div class="title">Retweets</div>
+            <div class="twitter-icon icon">
+              <img src="./images/icon-twitter.svg" alt="twitter" />
+            </div>
             <div class="number">117</div>
-            <div class="percent">303%</div>
+            <div class="percent positive">
+              <div class="details">
+                <div class="up-icon">
+                  <img src="./images/icon-up.svg" alt="up icon" />
+                </div>
+                &nbsp;303%
+              </div>
+            </div>
           </div>
+
           <div class="today-container twitter-likes">
             <div class="title">Likes</div>
+            <div class="twitter-icon icon">
+              <img src="./images/icon-twitter.svg" alt="twitter" />
+            </div>
             <div class="number">507</div>
-            <div class="percent">553%</div>
+            <div class="percent positive">
+              <div class="details">
+                <div class="up-icon">
+                  <img src="./images/icon-up.svg" alt="up icon" />
+                </div>
+                &nbsp;553%
+              </div>
+            </div>
           </div>
           <div class="today-container youtube-likes">
             <div class="title">Likes</div>
+            <div class="youtube-icon icon">
+              <img src="./images/icon-youtube.svg" alt="youtube" />
+            </div>
             <div class="number">107</div>
-            <div class="percent">19%</div>
+            <div class="percent negative">
+              <div class="details">
+                <div class="down-icon">
+                  <img src="./images/icon-down.svg" alt="down icon" />
+                </div>
+                &nbsp;19%
+              </div>
+            </div>
           </div>
           <div class="today-container youtube-total-views">
             <div class="title">Total Views</div>
+            <div class="youtube-icon icon">
+              <img src="./images/icon-youtube.svg" alt="youtube" />
+            </div>
             <div class="number">1407</div>
-            <div class="percent">12%</div>
+            <div class="percent negative">
+              <div class="details">
+                <div class="down-icon">
+                  <img src="./images/icon-down.svg" alt="down icon" />
+                </div>
+                &nbsp;12%
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -119,5 +243,6 @@
         </div>
       </footer>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

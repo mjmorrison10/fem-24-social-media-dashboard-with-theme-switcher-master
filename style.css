@@ -55,9 +55,17 @@
   --fontSize-x8-large: calc(var(--fontSize) * 1.8);
   --fontSize-x9-large: calc(var(--fontSize) * 1.9);
   --fontSize-x20-large: calc(var(--fontSize) * 2);
+  --fontSize-x2-5-large: calc(var(--fontSize) * 2.5);
+  --fontSize-x30-large: calc(var(--fontSize) * 3);
+  --fontSize-x3-5-large: calc(var(--fontSize) * 3.5);
+  --fontSize-x40-large: calc(var(--fontSize) * 4);
+  --fontSize-x4-5-large: calc(var(--fontSize) * 4.5);
+  --fontSize-x50-large: calc(var(--fontSize) * 5);
 
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
+
+  --borderRadius: 4px;
 }
 
 * {
@@ -77,6 +85,10 @@ body {
   /* align-items: center; */
 }
 
+.body.dark {
+  background-color: var(--color-darkTheme-Very-Dark-Blue-BG);
+}
+
 .wrapper {
   max-width: 1440px;
   width: 100%;
@@ -84,6 +96,22 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.wrapper::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13.5rem;
+  background-color: var(--color-lightTheme-Very-Pale-Blue-Top-BG-Pattern);
+  z-index: -1;
+}
+
+.wrapper.dark::before {
+  background-color: var(--color-darkTheme-Very-Dark-Blue-Top-BG-Pattern);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */
@@ -103,9 +131,17 @@ header {
   font-weight: var(--fontWeight-bold);
 }
 
+.header-title.dark {
+  color: var(--color-darkTheme-White-Text);
+}
+
 .header-followers {
   color: var(--color-lightTheme-Dark-Grayish-Blue-Text);
   font-weight: var(--fontWeight-bold);
+}
+
+.header-followers.dark {
+  color: var(--color-darkTheme-Desaturated-Blue-Text);
 }
 
 .right-container {
@@ -113,6 +149,10 @@ header {
   align-items: center;
   color: var(--color-LightToggle);
   font-weight: var(--fontWeight-bold);
+}
+
+.right-container.dark {
+  color: var(--color-darkTheme-Desaturated-Blue-Text);
 }
 
 /* The switch - the box around the slider */
@@ -193,19 +233,119 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0px 2rem;
   grid-template-areas: "facebook twitter instagram youtube";
 }
+
+.container {
+  background-color: var(--color-lightTheme-Light-Grayish-Blue-Card-BG);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.container.dark {
+  background-color: var(--color-darkTheme-Dark-Desaturated-Blue-Card-BG);
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fontWeight-bold);
+}
+
+.social-media {
+  margin: 1rem 0;
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-lightTheme-Dark-Grayish-Blue-Text);
+}
+
+.number-of-followers {
+  font-size: var(--fontSize-x40-large);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-lightTheme-Very-Dark-Blue-Text);
+}
+.number-of-followers.dark {
+  color: var(--color-darkTheme-White-Text);
+}
+
+.social-text {
+  letter-spacing: 6px;
+  color: var(--color-lightTheme-Very-Dark-Blue-Text);
+  text-transform: uppercase;
+}
+
+.social-text.dark {
+  color: var(--color-darkTheme-Desaturated-Blue-Text);
+}
+
+.today-amount {
+  margin: 1rem 0;
+  font-weight: var(--fontWeight-bold);
+}
+
+.positive {
+  color: var(--color-Lime-Green);
+}
+
+.negative {
+  color: var(--color-Bright-Red);
+}
+
 .facebook {
   grid-area: facebook;
+  border-top: 4px solid var(--color-Facebook);
 }
+
 .twitter {
+  border-top: 4px solid var(--color-Twitter);
   grid-area: twitter;
 }
+
 .instagram {
   grid-area: instagram;
+  position: relative;
 }
+
+.instagram::before {
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    var(--color-Instagram) 0%,
+    var(--color-Instagram-2) 100%
+  );
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 4px;
+  position: absolute;
+}
+
 .youtube {
+  border-top: 4px solid var(--color-YouTube);
   grid-area: youtube;
 }
 
@@ -213,15 +353,36 @@ input:checked + .slider:before {
 /* Today ///////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////// */
 
+/* https://grid.layoutit.com/?id=Vqd5hAI */
+
+.overview {
+  margin: 3rem 0 1.5rem 0;
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-lightTheme-Dark-Grayish-Blue-Text);
+  font-size: var(--fontSize-x20-large);
+}
+
+.overview.dark {
+  color: var(--color-darkTheme-White-Text);
+}
+
 .today {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  gap: 1.5rem 2rem;
   grid-auto-flow: row;
   grid-template-areas:
     "facebook-page-views facebook-likes instagram-likes instagram-profile-views"
     "twitter-retweets twitter-likes youtube-likes youtube-total-views";
+}
+
+.today-container {
+  background-color: var(--color-lightTheme-Light-Grayish-Blue-Card-BG);
+  border-radius: var(--borderRadius);
+}
+.today-container.dark {
+  background-color: var(--color-darkTheme-Dark-Desaturated-Blue-Card-BG);
 }
 
 .facebook-page-views {
@@ -256,20 +417,162 @@ input:checked + .slider:before {
   grid-area: youtube-total-views;
 }
 
+.today-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title icon"
+    "number percent";
+  padding: 2rem;
+}
+
+.title {
+  justify-self: start;
+  align-self: center;
+  grid-area: title;
+  color: var(--color-lightTheme-Dark-Grayish-Blue-Text);
+  font-weight: var(--fontWeight-bold);
+}
+
+.title.dark {
+  color: var(--color-darkTheme-Desaturated-Blue-Text);
+}
+
+.icon {
+  justify-self: end;
+  align-self: center;
+  grid-area: icon;
+}
+
+.number {
+  justify-self: start;
+  align-self: center;
+  grid-area: number;
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-lightTheme-Very-Dark-Blue-Text);
+  font-size: var(--fontSize-x20-large);
+}
+
+.number.dark {
+  color: var(--color-darkTheme-White-Text);
+}
+
+.percent {
+  justify-self: end;
+  align-self: center;
+  grid-area: percent;
+  display: flex;
+  font-weight: var(--fontWeight-bold);
+}
+
+.up-icon,
+.down-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.up-icon img,
+.down-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 /* /////////////////////////////////////////////////////////////////////////////// */
 /* Footer //////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////// */
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
+.attribution.dark {
+  color: var(--color-darkTheme-White-Text);
+}
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* Media Queries //////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+/* grid.layoutit.com?id=B10286B */
+
+@media (max-height: 700px) {
+  footer {
+    position: inherit;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 1475px) {
+  .wrapper {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    max-width: 500px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .left-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .right-container {
+    border-top: 2px solid var(--color-lightTheme-Dark-Grayish-Blue-Text);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .daily-overview {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem 0px;
+    grid-template-areas:
+      "facebook"
+      "twitter"
+      "instagram"
+      "youtube";
+  }
+
+  .today {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "facebook-page-views"
+      "facebook-likes"
+      "instagram-likes"
+      "instagram-profile-views"
+      "twitter-retweets"
+      "twitter-likes"
+      "youtube-likes"
+      "youtube-total-views";
+  }
+
+  footer {
+    position: inherit;
+    margin-top: 5rem;
+  }
 }
